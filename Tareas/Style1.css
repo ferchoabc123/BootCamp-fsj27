@@ -1,0 +1,22 @@
+.header{
+    background-color: red;
+}
+
+.navbar{
+    background-color: rgb(202, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar .imagen{
+    height: 4rem;
+}
+
+.header > .navbar > .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    
+}
