@@ -106,5 +106,31 @@
     font-weight: 500;
 }
 
+.ofertas .prom-principal{
+    margin-top: 2rem;
+    border-radius: 2rem;
+}
+
+.ofertas .contenedor-sec{
+    display: flex;
+    
+    border-radius: 2rem;
+    max-width: 84.5%;
+    margin-left: 5.3rem;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.ofertas .contenedor-sec .prom-secundaria{
+    background-color: rgb(210, 10, 10);
+    border-radius: 2rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+   width: 30vw; 
+   height: 30vw ;
+}
+
+
+
 
 
