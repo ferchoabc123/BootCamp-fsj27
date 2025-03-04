@@ -109,26 +109,108 @@
 .ofertas .prom-principal{
     margin-top: 2rem;
     border-radius: 2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
 }
 
-.ofertas .contenedor-sec{
-    display: flex;
+
+.contenedor-columna{
+    display: grid;
+    grid-template-columns: 30rem 50rem;
     
-    border-radius: 2rem;
-    max-width: 84.5%;
-    margin-left: 5.3rem;
-    margin-top: 2rem;
-    padding: 2rem;
+
 }
 
-.ofertas .contenedor-sec .prom-secundaria{
-    background-color: rgb(210, 10, 10);
+.ofertas .contenedor-columna .item1-columna img{
     border-radius: 2rem;
-    margin-top: 1rem;
-    padding: 0.5rem;
-   width: 30vw; 
-   height: 30vw ;
+    height: 31.75vw;
+    margin-top: 2rem;
+    margin-left: 7.3rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
 }
+
+.ofertas .contenedor-columna .sub-contenedor-columna{
+    display: grid;
+    grid-gap: 100px;
+    grid-row-gap: 100px;
+    grid-template-columns: 25% 25%;
+    grid-template-rows: 25% 25%;
+    margin-left: 20rem;
+    margin-right: -7.3rem;
+    border-radius: 2rem;
+}
+
+.ofertas .contenedor-columna .sub-contenedor-columna .item2-columna img{
+    border-radius: 2rem;
+    height: 15vw;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+.ofertas .contenedor-columna .sub-contenedor-columna .item-columna-ancho img{
+    border-radius: 2rem;
+    height: 16vw;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.contenedor-columna2{
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem 20rem;
+    
+
+}
+
+.ofertas .contenedor-columna2 .item-columna2 .targeta {
+    border-radius: 2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 7.3rem;
+    margin-right: -3rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    box-shadow: 1rem;
+}
+
+.ofertas .contenedor-columna2 .item-columna2 .targeta img{
+    border-radius: 2rem;
+    height: 15vw;
+    width: 100%;
+    
+}
+
+.ofertas .contenedor-columna2 .item-columna2 .targeta p{
+    font-weight: 700;
+    
+}
+
+.contenedor-final{
+    margin-top: 2rem;
+    background-color: rgb(222, 222, 222)
+}
+
+.contenedor-final .sub-contenedor-f{
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
 
 
 
