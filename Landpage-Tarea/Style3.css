@@ -1,0 +1,235 @@
+.header{
+    background-color: rgb(218, 216, 216);
+    padding-bottom: 1rem;
+    
+ }
+ 
+ .navbar{
+     background-color: rgb(210, 10, 10);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     
+ }
+ .contenedor_logo{
+     display: flex;
+     align-items: center;   
+     
+ }
+ 
+ .header .navbar .contenedor_logo .imagen{
+     height: 4rem;
+ }
+ 
+ .header .navbar .contenedor_logo .Logotxt{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0;
+ }
+ 
+ 
+ 
+ .header .navbar .contenedor_logo .lupa{
+     color: white;
+     font-size: 2rem;
+     margin-left: 22rem
+     
+ }
+ 
+ .header .navbar .contenedor_logo .buscador{
+     border-radius: 2rem;
+     margin-left: 1rem;
+     width: 30rem;
+ }
+ 
+ .header .navbar .contenedor_logo .signo1{
+     margin-left: 24rem;
+ }
+ 
+ .header .navbar .contenedor_logo .signo2{
+     margin-left: 1rem;
+ }
+ 
+ .header .navbar .contenedor_logo .signo{
+     color: white;
+     font-size: 2rem;
+     margin-bottom: 0;
+     
+ }
+ .header .catalogo{
+     display: flex;
+     justify-content:start;
+     margin-bottom: 0;
+     margin-top: 0.5rem;
+     
+ }
+ 
+ 
+ .header .catalogo .txt2{
+     margin-top: 0.25rem;
+     margin-bottom: 0;
+     font-weight: 500;
+     
+ }
+ 
+ .header .catalogo .txt{
+     font-size: 1.35rem;
+     margin-top: 0.25rem;
+     margin-bottom: 0;
+     margin-left: 1rem;
+     margin-right: 1rem;
+     list-style-type: none;
+ }
+ 
+ .header .catalogo .c-servicio{
+     margin-left: 10rem;
+     font-size: 1.35rem;
+     margin-top: 0.25rem;
+     margin-bottom: 0;
+     margin-right: 1rem;
+     list-style-type: none;
+     font-weight: 500;
+ }
+ 
+ .check{
+     font-size: 1.25rem;
+ }
+ 
+ .header .catalogo .c-item{
+     margin-left: 5rem;
+     font-size: 1.15rem;
+     margin-top: 0.5rem;
+     margin-bottom: 0;
+     margin-right: 1rem;
+     list-style-type: none;
+     font-weight: 500;
+ }
+ 
+ .ofertas .prom-principal{
+     margin-top: 2rem;
+     border-radius: 2rem;
+     border-width: 1px;
+     border-style: solid;
+     border-color: black;
+ }
+ 
+ 
+ .contenedor-columna{
+     display: grid;
+     grid-template-columns: 18rem 39rem 20rem;
+     margin-bottom: -2rem;
+ }
+ 
+ .ofertas .contenedor-columna .item1-columna img{
+     border-radius: 2rem;
+     height: 25vw;
+     margin-top: 2rem;
+     margin-left: 7.3rem;
+     border-width: 1px;
+     border-style: solid;
+     border-color: black;
+ }
+
+ .ofertas .contenedor-columna .sub-contenedor-columna2{
+   
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 50% 50%;
+    border-radius: 2rem;
+    justify-content: center;
+}
+ 
+ .ofertas .contenedor-columna .sub-contenedor-columna{
+     margin-top: 2rem;
+     display: grid;
+     grid-gap: 20px;
+     grid-row-gap: 90px;
+     grid-template-columns: 25%;
+     grid-template-rows: 25% 25%;
+     border-radius: 2rem;
+     justify-content: center;
+ }
+ 
+ .ofertas .contenedor-columna .sub-contenedor-columna .item2-columna img{
+     border-radius: 2rem;
+     height: 12vw;
+     margin-left: 2rem;
+     border-width: 1px;
+     border-style: solid;
+     border-color: black;
+ }
+
+ .ofertas .prom-Tercero{
+    width: 90%;
+    border-radius: 2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+ 
+ .contenedor-columna2{
+    margin-top: 2rem;
+     display: grid;
+     grid-template-columns: 20rem 20rem 20rem 20rem;
+     margin-bottom: 10rem;
+     
+ }
+ 
+ .ofertas .contenedor-columna2 .item-columna2 .targeta {
+     border-radius: 2rem;
+     margin-left: 7.3rem;
+     margin-right: -3rem;
+     padding-bottom: 2rem;
+ 
+ }
+ 
+ .ofertas .contenedor-columna2 .item-columna2 .targeta img{
+     border-radius: 2rem;
+     height: 15vw;
+     width: 100%;
+     
+ }
+ 
+ .ofertas .contenedor-columna2 .item-columna2 .targeta h6{
+     margin-left: 1rem;
+ }
+ 
+ .ofertas .contenedor-columna2 .item-columna2 .targeta p{
+     margin-bottom: -0.3rem;
+     font-weight: 500;
+     margin-left: 1rem;
+ }
+ 
+ .ofertas .contenedor-columna2 .item-columna2 .targeta span{
+     margin-left: 1rem;
+     font-size:small;
+ }
+ 
+ .ofertas .contenedor-columna2 .item-columna2 .targeta .nom{
+     font-size:small;
+     font-weight: 700;  
+ }
+ 
+ .ofertas .contenedor-columna2 .item-columna2 .targeta .cuadro{
+     background-color: rgb(182, 13, 13); 
+     color: white;
+     border-radius: 0.2rem;
+     border-width: 1px;
+     border-style: solid;
+     border-color: black;
+     padding: 0.2rem;
+ }
+ 
+ .contenedor-final{
+     margin-top: 2rem;
+     background-color: rgb(222, 222, 222)
+ }
+ 
+ .contenedor-final .sub-contenedor-f{
+     display: flex;
+     justify-content: space-around;
+     text-align: justify;
+ }
+
+
