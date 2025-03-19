@@ -1,0 +1,24 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.imagen{
+    height: 100%;
+}
+
+.Texto-Adivinar{
+    display: flex;
+    list-style: none;
+    justify-items: center;
+}
+
+.Texto-Adivinar li{
+    margin-right: 1rem;
+}
+
+.TextoCaja{
+    margin-left: 28rem;
+}
+
