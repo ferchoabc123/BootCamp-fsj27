@@ -6,7 +6,7 @@ import Registrar from './components/Registrar'; // Import Registrar component
 import Login from './components/Login'; // Import Login component
 
 function App() {
-  const [count, setCount] = useState(0);
+  
 
   return (
     <>
