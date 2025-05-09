@@ -6,6 +6,7 @@ import {Register} from './views/session/components/Register';
 import Navbar from './components/Navbar'; // Import Navbar component
 import { Session } from './views/session/Session';
 import { UserDataProvider } from './context/UserDataContext';
+import Products from './views/products/Products';
 
 function App() {
   return (

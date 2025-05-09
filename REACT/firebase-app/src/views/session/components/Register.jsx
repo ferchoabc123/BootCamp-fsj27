@@ -35,13 +35,13 @@ export function Register() {
    
    console.log(data);
 
-createUserWithEmailAndPassword(auth, data.email, data.password, data.username )
+createUserWithEmailAndPassword(auth, data.email, data.password9)
  .then((userCredential) => {
    //Con Then realizamos una peticion asincrona a firebase y es una promesa
    
    // Signed up 
    const user = userCredential.user;
-   console.log(user);
+   
    
    // ...
  })

@@ -1,16 +1,19 @@
 import { useState } from "react"
 import { Login } from "./components/Login"
 import { Register } from "./components/Register"
-import { auth } from "../../services/firebase/config"
+import { Logout } from "./components/Logout"
+import { useUserData } from "../../context/UserDataContext";
 
 export const Session = () => {
   const [typeForm, setTypeForm] = useState("");
 
-  console.log(auth);
+  const {userData } = useUserData();
   
   return (
     <div className="container mt-4">
-        <section className="row justify-content-center">
+       { userData ? 
+       <Logout /> : 
+       <section className="row justify-content-center">
         <h1 className="text-center">Manejate la session pa</h1>
         <button className="btn btn-primary col-2 m-2 p-2" onClick={() => {setTypeForm("login")} }>Login</button>
         <button className="btn btn-success col-2 m-2 p-2" onClick={() => {setTypeForm("register")} }>Register</button>
@@ -21,8 +24,12 @@ export const Session = () => {
 
 
         { typeForm === "login" ?  <Login /> : <Register /> }
+
+    
         
-        </section>
+        </section> }
+
+        
     </div>
   )
 }

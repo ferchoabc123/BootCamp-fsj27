@@ -5,6 +5,7 @@ import { yupResolver} from '@hookform/resolvers/yup'
 import { auth } from '../../../services/firebase/config'; 
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useUserData } from '../../../context/UserDataContext';
+import { useNavigate } from 'react-router';
 
 const schema = yup.object().shape({
   email: yup.string().email('El correo electronico no es valido').required('El correo electronico es requerido'),
@@ -16,6 +17,7 @@ export function Login() {
    const {register, handleSubmit, formState:{errors}} = useForm({
      resolver: yupResolver(schema)
    })
+    const navigate = useNavigate(); // Hook para redirigir
 
    //Destructuring objeto
    const { setUserData} = useUserData();
@@ -33,7 +35,7 @@ export function Login() {
     
     // Guardar el usuario en el contexto
     setUserData(user);
-
+    navigate('/home'); // Redirigir a la página de inicio después de iniciar sesión
   })
   .catch((error) => {
     const errorCode = error.code;
