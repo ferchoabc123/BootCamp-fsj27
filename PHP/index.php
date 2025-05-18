@@ -135,6 +135,88 @@
         }
     }
 
+
+
+    Class Queue {
+        public $queue = [];
+
+        function add($element) {
+            array_unshift($this->queue, $element);
+        }
+
+        function remove() {
+            return array_pop($this->queue);
+        }
+    }
+
+    class Node {
+        public $value;
+        public $next;
+
+        function __construct($value) {
+            $this->value = $value;
+            $this->next = null;
+        }
+    }
+// solo para checkear funcionamiento
+   
+
+    class LinkedList {
+        public $head; // cabeza de la lista
+        
+        function __construct() {
+            $this->head = null;
+        }
+
+        function add($value){
+            $newNode = new Node($value);
+            if ($this->head === null) {
+                $this->head = $newNode;
+            } else {
+                
+                $current = $this->head;
+                while ($current->next !== null) {
+                    $current = $current->next;
+                }
+                $current->next = $newNode;
+            }
+        }
+
+        function remover($dato){
+            
+            if($this->head === null){
+                return "La lista esta vacia";
+            }else{
+                if($this->head->value === $dato){
+                    print("se encontro el valor");
+                    $this->head = $this->head->next;
+                    print("Se elimino el dato");
+                }else{
+                    $ayudante = $this->head;
+                    while($ayudante->next !== null){
+                        print("vuelta");
+                        if($ayudante->next->value === $dato){
+                            $ayudante->next = $ayudante->next->next;
+                        }else{
+                            $ayudante = $ayudante->next;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+    }
+
+    $lista = new LinkedList();
+    $lista->add(1);
+    $lista->add(2);
+    $lista->add(3);
+    $lista->add(4);
+    $lista->add(5);
+    print_r($lista);
+    $lista->remover(4);
+    print_r($lista);
     ?>
 </body>
 
