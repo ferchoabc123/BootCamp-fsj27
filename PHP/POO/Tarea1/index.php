@@ -116,18 +116,18 @@ if ($editando && $libroEditar !== null && isset($editKey)) {
             <div class="mb-4">
                 <h4>Editar libro</h4>
                 <form method="post" class="row g-3">
-                    <input type="hidden" name="id_libro" value="<?php echo htmlspecialchars($libroEditar->getIdLibro()); ?>">
+                    <input type="hidden" name="id_libro" value="<?php echo ($libroEditar->getIdLibro()); ?>">
                     <div class="col-md-4">
                         <label class="form-label">Título</label>
-                        <input type="text" class="form-control" name="titulo" value="<?php echo htmlspecialchars($libroEditar->getTitulo()); ?>" required>
+                        <input type="text" class="form-control" name="titulo" value="<?php echo ($libroEditar->getTitulo()); ?>" required>
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Autor</label>
-                        <input type="text" class="form-control" name="autor" value="<?php echo htmlspecialchars($libroEditar->getAutor()); ?>" required>
+                        <input type="text" class="form-control" name="autor" value="<?php echo ($libroEditar->getAutor()); ?>" required>
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Género</label>
-                        <input type="text" class="form-control" name="genero" value="<?php echo htmlspecialchars($libroEditar->getGenero()); ?>" required>
+                        <input type="text" class="form-control" name="genero" value="<?php echo ($libroEditar->getGenero()); ?>" required>
                     </div>
                     <div class="col-12 mt-3">
                         <button type="submit" name="editar_libro" class="btn btn-success">Guardar cambios</button>
@@ -147,10 +147,10 @@ if ($editando && $libroEditar !== null && isset($editKey)) {
                         <li class="flex-fill" style="min-width: 220px; max-width: 250px;">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?php echo htmlspecialchars($libro->getTitulo()); ?></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><?php echo htmlspecialchars($libro->getGenero()); ?></h6>
-                                    <p class="card-text"><?php echo htmlspecialchars($libro->getAutor()); ?></p>
-                                    <p class="card-text"><small class="text-muted"><?php echo htmlspecialchars($libro->getIdLibro()); ?></small></p>
+                                    <h5 class="card-title"><?php echo ($libro->getTitulo()); ?></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><?php echo ($libro->getGenero()); ?></h6>
+                                    <p class="card-text"><?php echo ($libro->getAutor()); ?></p>
+                                    <p class="card-text"><small class="text-muted"><?php echo ($libro->getIdLibro()); ?></small></p>
                                     <div class="d-flex justify-content-between">
                                         <!-- se ven diferente al de la clase porque no estoy utilizando php directo para crearlas sino que solo lo utilizo en la parte especifica-->
                                          <!--El otro esta dentro de un echo este no, esta hecho principalmente de html -->
