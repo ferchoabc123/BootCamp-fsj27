@@ -1,11 +1,15 @@
 <?php 
 //metodo Adapter
 
+interface Api {
+    public function Actualizar($archivo);
+}
+
 interface ProcesarArchivo {
     public function analizar($archivo);
 }
 
-class Window10Api{
+class Window10Api implements Api {
     public function Actualizar($archivo) {
         echo "Actualizando archivo para Windows 10: $archivo \n";
         $archivo = str_replace(".txt", ".W10", $archivo);
@@ -14,10 +18,10 @@ class Window10Api{
   
 }
 
-class Window10Adapter implements ProcesarArchivo {
+class Adapter implements ProcesarArchivo {
     private $api;
 
-    public function __construct(Window10Api $api) {
+    public function __construct(Api $api) {
         $this->api = $api;
     }
 
@@ -36,7 +40,7 @@ class ActualizadorArchivos{
 }
 
 $api = new Window10Api();
-$adaptador = new Window10Adapter($api);
+$adaptador = new Adapter($api);
 $Programa = new ActualizadorArchivos();
 echo $Programa->actualizar($adaptador, "documento.txt");
 
