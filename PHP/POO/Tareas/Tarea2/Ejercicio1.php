@@ -29,18 +29,8 @@ class Zombie implements Enemigo {
 }
 
 abstract class GenerarEnemigo {
-    abstract public function crearEnemigo($dificultad): Enemigo;
-
-    public function IniciarJuego($default = "fácil") {
-        $enemigo = $this->crearEnemigo($default);
-        echo $enemigo->atacar() . "\n";
-        echo $enemigo->velocidad() . "\n";
-    }
-
-}
-
-class Juego extends GenerarEnemigo {
-    public function crearEnemigo($dificultad): Enemigo {
+    public  static function crearEnemigo($dificultad): Enemigo{
+        
         if($dificultad == "fácil") {
             return new Eskeleto();
         } elseif ($dificultad == "difícil") {
@@ -49,9 +39,32 @@ class Juego extends GenerarEnemigo {
             throw new Exception("Dificultad no válida. Debe ser 'fácil' o 'difícil'.");
         }
     }
+
+    public function CargarEnemigo($default = "fácil") {
+        $enemigo = self::crearEnemigo($default);
+        echo $enemigo->atacar() . "\n";
+        echo $enemigo->velocidad() . "\n";
+    }
+
+}
+
+class Juego extends GenerarEnemigo {
+    public function IniciarJuego($dificultad = "fácil") {
+        try {
+            parent::CargarEnemigo($dificultad);
+        } catch (Exception $e) {
+            echo $e->getMessage() . "\n";
+        }
+    }
+    
 }
 
 $partida = new Juego();
-$partida->IniciarJuego("difícil"); // dejar en blanco para probar la opcion facil
+$partida->IniciarJuego("fácil"); // Crea un enemigo fácil
+print("\n");
+$partida->IniciarJuego("difícil"); // Crea un enemigo difícil
+
+
+
 
 ?>
