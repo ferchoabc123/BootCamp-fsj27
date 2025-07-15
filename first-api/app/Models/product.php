@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class product extends Model
 {
-    //
+    // 
+    protected $filelable = [
+        'name',
+        'price',
+        'stock'
+    ];
 }
